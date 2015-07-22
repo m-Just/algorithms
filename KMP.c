@@ -12,15 +12,14 @@ int main() {
   int next[strlen(mod_str)+1];
   getNext2(mod_str, strlen(mod_str), next);
 
-
-  int i = 0, j = 0; int found = 0;
+  int i = 0, j = 0;
   int mlen = strlen(mod_str);
   int plen = strlen(pri_str);
 
   while (i + mlen <= plen) {
     while (j < mlen && pri_str[i] == mod_str[j]){
       i++; j++;
-      if (j == mlen) { printf("Found match at position %d\n", i-j+1); found = 1;}
+      if (j == mlen) printf("Found match at position %d\n", i-j+1);
     }
     if (i == plen) break;
     i -= next[j]; j = 0;
