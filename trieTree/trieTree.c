@@ -73,6 +73,7 @@ int lookUp() {
     } else return found;
     
     while (current != '\n') {
+      found = 0;
       if (ptr->next[0]) {
         int k;
         for (k = 0; k < ptr->size; k++) {
@@ -82,7 +83,6 @@ int lookUp() {
 	    break;
 	  }
       	}	
-      	if (!found) return 0;
       } else break;
       current = getchar();
     }
