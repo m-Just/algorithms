@@ -1,1 +1,1 @@
-# algorithms
+# Common useful algorithms implementation
