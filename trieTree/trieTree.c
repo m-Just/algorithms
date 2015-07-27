@@ -63,46 +63,29 @@ int readVocabulary() {
 }
 
 int lookUp() {
+    int found = 0;
     char current = getchar();
     treeNode* ptr = NULL;
     if (header[current-97]) {                   // find the header
       ptr = header[current-97];
-      output[i] = 1;
+      found = 1;
       current = getchar();
-    } else {
-      while (current != '\n') {
-        current = getchar();
-      }
-      output[i] = 0;
-      continue; 
-    }
-
+    } else return found;
+    
     while (current != '\n') {
       if (ptr->next[0]) {
-        int k; int found = 0;
+        int k;
         for (k = 0; k < ptr->size; k++) {
-	        if (current == ptr->next[k]->letter) {
-	          ptr = ptr->next[k];
-	          found = 1;
-	          output[i] = 1;
-	          break;
-	         }
+	  if (current == ptr->next[k]->letter) {
+	    ptr = ptr->next[k];
+	    found = 1;
+	    break;
+	  }
       	}	
-      	if (!found) {
-	        output[i] = 0; 
-	        break;
-      	}
-      } else {
-        output[i] = 0;
-	      break;
-      }
-      current = getchar();   
+      	if (!found) return 0;
+      } else break;
+      current = getchar();
     }
-    while (current != '\n') {
-	    current = getchar();
-    }
-    if (output[i])
-      output[i] = ptr->appearance;
 
-  return 0;
+  return found;
 }
