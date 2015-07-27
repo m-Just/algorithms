@@ -9,3 +9,6 @@ struct node {
 };
 
 typedef struct node treeNode;
+
+int readVocabulary();
+int lookUp;
