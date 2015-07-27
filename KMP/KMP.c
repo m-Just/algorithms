@@ -1,5 +1,7 @@
 /* KMP algorithm used to search for certain
- * substring matches in a large string */  
+ * substring matches in a large string */ 
+ 
+#include <KMP.h>
   
 int kmp(char* mod_str, char* pri_str) {
   int mlen = strlen(mod_str);
