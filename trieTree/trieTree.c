@@ -1,4 +1,4 @@
-#include <trieTree.h>
+#include "trieTree.h"
 
 int readVocabulary() {
   /* Construct dictionary */

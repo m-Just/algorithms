@@ -5,6 +5,8 @@
  *
  * Coded by m.Just 2015-08-07
  */
+
+#include "gaussElimination.h"
  
 int solve(double* a, double* y, int h, int w, double* buff) {
         int i, j;

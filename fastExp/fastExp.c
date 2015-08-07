@@ -4,7 +4,7 @@
  * Set the buffer to the value of the exponential term MOD (by 10e9 + 7).
  */
  
-#include <fastExp.h>
+#include "fastExp.h"
 
 long long fastExp(long long base, int exp, long long* ans_buff) {
 	long long result = 1;
