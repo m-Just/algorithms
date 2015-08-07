@@ -1,4 +1,4 @@
-#include <KMP.h>
+#include "KMP.h"
 
 int main() {
   char pri_str[1000], mod_str[1000];
